@@ -1,0 +1,164 @@
+1. 串行GC执行结果
+➜  target git:(master) ✗ java -jar -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseSerialGC demo-0.0.1-SNAPSHOT.jar 
+正在执行...
+2021-07-04T23:03:46.621-0800: [GC (Allocation Failure) 2021-07-04T23:03:46.622-0800: [DefNew: 69952K->8703K(78656K), 0.0131112 secs] 69952K->23827K(253440K), 0.0131948 secs] [Times: user=0.02 sys=0.01, real=0.01 secs] 
+2021-07-04T23:03:46.647-0800: [GC (Allocation Failure) 2021-07-04T23:03:46.647-0800: [DefNew: 78367K->8703K(78656K), 0.0241917 secs] 93491K->49125K(253440K), 0.0242836 secs] [Times: user=0.01 sys=0.01, real=0.03 secs] 
+2021-07-04T23:03:46.680-0800: [GC (Allocation Failure) 2021-07-04T23:03:46.680-0800: [DefNew: 78655K->8702K(78656K), 0.0193448 secs] 119077K->77372K(253440K), 0.0194283 secs] [Times: user=0.01 sys=0.01, real=0.01 secs] 
+2021-07-04T23:03:46.709-0800: [GC (Allocation Failure) 2021-07-04T23:03:46.709-0800: [DefNew: 78654K->8697K(78656K), 0.0139563 secs] 147324K->100798K(253440K), 0.0140501 secs] [Times: user=0.01 sys=0.01, real=0.02 secs] 
+2021-07-04T23:03:46.732-0800: [GC (Allocation Failure) 2021-07-04T23:03:46.732-0800: [DefNew: 78557K->8702K(78656K), 0.0148700 secs] 170658K->125509K(253440K), 0.0149899 secs] [Times: user=0.00 sys=0.01, real=0.01 secs] 
+2021-07-04T23:03:46.756-0800: [GC (Allocation Failure) 2021-07-04T23:03:46.756-0800: [DefNew: 78063K->8700K(78656K), 0.0143829 secs] 194869K->150371K(253440K), 0.0144655 secs] [Times: user=0.01 sys=0.00, real=0.02 secs] 
+2021-07-04T23:03:46.779-0800: [GC (Allocation Failure) 2021-07-04T23:03:46.779-0800: [DefNew: 78652K->8696K(78656K), 0.0159133 secs] 220323K->174600K(253440K), 0.0160151 secs] [Times: user=0.01 sys=0.01, real=0.02 secs] 
+2021-07-04T23:03:46.805-0800: [GC (Allocation Failure) 2021-07-04T23:03:46.805-0800: [DefNew: 78648K->8696K(78656K), 0.0138994 secs]
+2021-07-04T23:03:46.819-0800: [Tenured: 188455K->169819K(188472K), 0.0234025 secs] 244552K->169819K(267128K), [Metaspace: 5174K->5174K(1056768K)], 0.0376170 secs] [Times: user=0.03 sys=0.00, real=0.04 secs] 
+2021-07-04T23:03:46.871-0800: [GC (Allocation Failure) 2021-07-04T23:03:46.871-0800: [DefNew: 113280K->14141K(127424K), 0.0120136 secs] 283099K->203803K(410460K), 0.0121293 secs] [Times: user=0.01 sys=0.01, real=0.01 secs] 
+2021-07-04T23:03:46.900-0800: [GC (Allocation Failure) 2021-07-04T23:03:46.900-0800: [DefNew: 127421K->14141K(127424K), 0.0327993 secs] 317083K->243317K(410460K), 0.0329006 secs] [Times: user=0.02 sys=0.01, real=0.03 secs] 
+2021-07-04T23:03:46.948-0800: [GC (Allocation Failure) 2021-07-04T23:03:46.948-0800: [DefNew: 127421K->14142K(127424K), 0.0194043 secs] 356597K->273582K(410460K), 0.0194967 secs] [Times: user=0.01 sys=0.01, real=0.02 secs] 
+2021-07-04T23:03:46.982-0800: [GC (Allocation Failure) 2021-07-04T23:03:46.982-0800: [DefNew: 127422K->14142K(127424K), 0.0196544 secs]
+2021-07-04T23:03:47.002-0800: [Tenured: 291892K->250044K(292048K), 0.0329557 secs] 386862K->250044K(419472K), [Metaspace: 5174K->5174K(1056768K)], 0.0529867 secs] [Times: user=0.04 sys=0.01, real=0.05 secs] 
+2021-07-04T23:03:47.071-0800: [GC (Allocation Failure) 2021-07-04T23:03:47.071-0800: [DefNew: 166784K->20798K(187584K), 0.0208764 secs] 416828K->308608K(604328K), 0.0209832 secs] [Times: user=0.01 sys=0.01, real=0.02 secs] 
+2021-07-04T23:03:47.114-0800: [GC (Allocation Failure) 2021-07-04T23:03:47.114-0800: [DefNew: 187582K->20798K(187584K), 0.0433683 secs] 475392K->358711K(604328K), 0.0434650 secs] [Times: user=0.02 sys=0.03, real=0.04 secs] 
+2021-07-04T23:03:47.178-0800: [GC (Allocation Failure) 2021-07-04T23:03:47.178-0800: [DefNew: 187582K->20798K(187584K), 0.0321950 secs] 525495K->410361K(604328K), 0.0322934 secs] [Times: user=0.02 sys=0.01, real=0.04 secs] 
+2021-07-04T23:03:47.233-0800: [GC (Allocation Failure) 2021-07-04T23:03:47.233-0800: [DefNew: 187416K->20798K(187584K), 0.0358141 secs]
+2021-07-04T23:03:47.269-0800: [Tenured: 445291K->323485K(445336K), 0.0438776 secs] 576979K->323485K(632920K), [Metaspace: 5174K->5174K(1056768K)], 0.0801677 secs] [Times: user=0.06 sys=0.02, real=0.08 secs] 
+2021-07-04T23:03:47.345-0800: [GC (Allocation Failure) 2021-07-04T23:03:47.345-0800: [DefNew: 215744K->26943K(242688K), 0.0251052 secs] 539229K->395980K(781832K), 0.0252030 secs] [Times: user=0.02 sys=0.01, real=0.03 secs] 
+2021-07-04T23:03:47.399-0800: [GC (Allocation Failure) 2021-07-04T23:03:47.400-0800: [DefNew: 242687K->26943K(242688K), 0.0259834 secs] 611724K->454882K(781832K), 0.0260782 secs] [Times: user=0.02 sys=0.01, real=0.03 secs] 
+2021-07-04T23:03:47.454-0800: [GC (Allocation Failure) 2021-07-04T23:03:47.454-0800: [DefNew: 242687K->26943K(242688K), 0.0312417 secs] 670626K->515254K(781832K), 0.0313402 secs] [Times: user=0.02 sys=0.01, real=0.03 secs] 
+2021-07-04T23:03:47.513-0800: [GC (Allocation Failure) 2021-07-04T23:03:47.513-0800: [DefNew: 242687K->26943K(242688K), 0.0418288 secs]
+2021-07-04T23:03:47.555-0800: [Tenured: 550356K->340891K(550452K), 0.0491950 secs] 730998K->340891K(793140K), [Metaspace: 5174K->5174K(1056768K)], 0.0912414 secs] [Times: user=0.07 sys=0.02, real=0.09 secs] 
+执行结束!共生成对象次数:9525
+Heap
+ def new generation   total 255744K, used 9285K [0x00000006c0000000, 0x00000006d1570000, 0x0000000715550000)
+  eden space 227392K,   4% used [0x00000006c0000000, 0x00000006c0911470, 0x00000006cde10000)
+  from space 28352K,   0% used [0x00000006cde10000, 0x00000006cde10000, 0x00000006cf9c0000)
+  to   space 28352K,   0% used [0x00000006cf9c0000, 0x00000006cf9c0000, 0x00000006d1570000)
+ tenured generation   total 568156K, used 340891K [0x0000000715550000, 0x0000000738027000, 0x00000007c0000000)
+   the space 568156K,  59% used [0x0000000715550000, 0x000000072a236e68, 0x000000072a237000, 0x0000000738027000)
+ Metaspace       used 5180K, capacity 5386K, committed 5504K, reserved 1056768K
+  class space    used 559K, capacity 626K, committed 640K, reserved 1048576K
+
+
+GC总结：20次年轻代GC，4次老年代GC
+
+
+2. 并行GC执行结果
+➜  target git:(master) ✗ java -jar -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseParallelGC demo-0.0.1-SNAPSHOT.jar
+正在执行...
+2021-07-04T23:07:53.103-0800: [GC (Allocation Failure) [PSYoungGen: 65291K->10740K(76288K)] 65291K->25103K(251392K), 0.0080855 secs] [Times: user=0.02 sys=0.04, real=0.01 secs] 
+2021-07-04T23:07:53.122-0800: [GC (Allocation Failure) [PSYoungGen: 76276K->10742K(141824K)] 90639K->46059K(316928K), 0.0103183 secs] [Times: user=0.02 sys=0.07, real=0.01 secs] 
+2021-07-04T23:07:53.170-0800: [GC (Allocation Failure) [PSYoungGen: 141814K->10746K(141824K)] 177131K->94196K(316928K), 0.0182618 secs] [Times: user=0.03 sys=0.11, real=0.01 secs] 
+2021-07-04T23:07:53.203-0800: [GC (Allocation Failure) [PSYoungGen: 141818K->10739K(272896K)] 225268K->136130K(448000K), 0.0149480 secs] [Times: user=0.03 sys=0.09, real=0.01 secs] 
+2021-07-04T23:07:53.218-0800: [Full GC (Ergonomics) [PSYoungGen: 10739K->0K(272896K)] [ParOldGen: 125391K->119584K(250880K)] 136130K->119584K(523776K), [Metaspace: 5170K->5170K(1056768K)], 0.0174601 secs] [Times: user=0.13 sys=0.01, real=0.02 secs] 
+2021-07-04T23:07:53.325-0800: [GC (Allocation Failure) [PSYoungGen: 261948K->10750K(272896K)] 381533K->202294K(523776K), 0.0247115 secs] [Times: user=0.05 sys=0.16, real=0.02 secs] 
+2021-07-04T23:07:53.349-0800: [Full GC (Ergonomics) [PSYoungGen: 10750K->0K(272896K)] [ParOldGen: 191543K->174155K(348160K)] 202294K->174155K(621056K), [Metaspace: 5170K->5170K(1056768K)], 0.0232437 secs] [Times: user=0.17 sys=0.00, real=0.03 secs] 
+2021-07-04T23:07:53.413-0800: [GC (Allocation Failure) [PSYoungGen: 262144K->86712K(542720K)] 436299K->260867K(890880K), 0.0307115 secs] [Times: user=0.04 sys=0.19, real=0.03 secs] 
+2021-07-04T23:07:53.572-0800: [GC (Allocation Failure) [PSYoungGen: 541880K->104441K(559616K)] 716035K->361143K(907776K), 0.0520841 secs] [Times: user=0.10 sys=0.34, real=0.05 secs] 
+2021-07-04T23:07:53.624-0800: [Full GC (Ergonomics) [PSYoungGen: 104441K->0K(559616K)] [ParOldGen: 256702K->276555K(479232K)] 361143K->276555K(1038848K), [Metaspace: 5170K->5170K(1056768K)], 0.0366653 secs] [Times: user=0.25 sys=0.05, real=0.04 secs] 
+2021-07-04T23:07:53.731-0800: [GC (Allocation Failure) [PSYoungGen: 455168K->127345K(939520K)] 731723K->403901K(1418752K), 0.0399714 secs] [Times: user=0.05 sys=0.27, real=0.04 secs] 
+2021-07-04T23:07:53.922-0800: [GC (Allocation Failure) [PSYoungGen: 903537K->176119K(952320K)] 1180093K->513333K(1431552K), 0.0922275 secs] [Times: user=0.09 sys=0.28, real=0.09 secs] 
+执行结束!共生成对象次数:11434
+Heap
+ PSYoungGen      total 952320K, used 650758K [0x000000076ab00000, 0x00000007c0000000, 0x00000007c0000000)
+  eden space 776192K, 61% used [0x000000076ab00000,0x0000000787a83d08,0x000000079a100000)
+  from space 176128K, 99% used [0x000000079a100000,0x00000007a4cfdcb8,0x00000007a4d00000)
+  to   space 228352K, 0% used [0x00000007b2100000,0x00000007b2100000,0x00000007c0000000)
+ ParOldGen       total 479232K, used 337214K [0x00000006c0000000, 0x00000006dd400000, 0x000000076ab00000)
+  object space 479232K, 70% used [0x00000006c0000000,0x00000006d494f878,0x00000006dd400000)
+ Metaspace       used 5177K, capacity 5386K, committed 5504K, reserved 1056768K
+  class space    used 559K, capacity 626K, committed 640K, reserved 1048576K
+
+GC总结：12次年轻代GC，3次老年代GC
+
+3. CMSGC执行结果
+➜  target git:(master) ✗ java -jar -XX:+PrintGCDetails -XX:+PrintGCDateStamps -XX:+UseConcMarkSweepGC demo-0.0.1-SNAPSHOT.jar
+正在执行...
+2021-07-04T23:18:46.031-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.031-0800: [ParNew: 69952K->8704K(78656K), 0.0073392 secs] 69952K->22509K(253440K), 0.0074321 secs] [Times: user=0.02 sys=0.03, real=0.00 secs] 
+2021-07-04T23:18:46.051-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.051-0800: [ParNew: 78120K->8704K(78656K), 0.0096588 secs] 91926K->43212K(253440K), 0.0097520 secs] [Times: user=0.03 sys=0.04, real=0.01 secs] 
+2021-07-04T23:18:46.070-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.070-0800: [ParNew: 78537K->8698K(78656K), 0.0151617 secs] 113046K->70482K(253440K), 0.0152605 secs] [Times: user=0.14 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.093-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.093-0800: [ParNew: 78650K->8704K(78656K), 0.0168151 secs] 140434K->97859K(253440K), 0.0169025 secs] [Times: user=0.14 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.110-0800: [GC (CMS Initial Mark) [1 CMS-initial-mark: 89155K(174784K)] 98003K(253440K), 0.0003686 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-07-04T23:18:46.111-0800: [CMS-concurrent-mark-start]
+2021-07-04T23:18:46.112-0800: [CMS-concurrent-mark: 0.002/0.002 secs] [Times: user=0.00 sys=0.01, real=0.00 secs] 
+2021-07-04T23:18:46.112-0800: [CMS-concurrent-preclean-start]
+2021-07-04T23:18:46.113-0800: [CMS-concurrent-preclean: 0.001/0.001 secs] [Times: user=0.00 sys=0.00, real=0.00 secs] 
+2021-07-04T23:18:46.113-0800: [CMS-concurrent-abortable-preclean-start]
+2021-07-04T23:18:46.120-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.120-0800: [ParNew: 78559K->8701K(78656K), 0.0133817 secs] 167715K->118249K(253440K), 0.0134792 secs] [Times: user=0.12 sys=0.00, real=0.01 secs] 
+2021-07-04T23:18:46.143-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.143-0800: [ParNew: 78653K->8688K(78656K), 0.0138595 secs] 188201K->142879K(253440K), 0.0139524 secs] [Times: user=0.13 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.166-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.166-0800: [ParNew: 78640K->8702K(78656K), 0.0163993 secs] 212831K->170444K(253440K), 0.0164904 secs] [Times: user=0.14 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.191-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.191-0800: [ParNew: 78654K->8702K(78656K), 0.0142037 secs] 240396K->193281K(265268K), 0.0142927 secs] [Times: user=0.13 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.214-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.215-0800: [ParNew: 78654K->8700K(78656K), 0.0131515 secs] 263233K->213098K(285040K), 0.0132358 secs] [Times: user=0.11 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.236-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.236-0800: [ParNew: 78557K->8702K(78656K), 0.0167402 secs] 282956K->239562K(311540K), 0.0168212 secs] [Times: user=0.15 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.261-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.261-0800: [ParNew: 78654K->8698K(78656K), 0.0161131 secs] 309514K->264219K(336140K), 0.0162061 secs] [Times: user=0.14 sys=0.02, real=0.01 secs] 
+2021-07-04T23:18:46.286-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.286-0800: [ParNew: 78551K->8702K(78656K), 0.0161138 secs] 334072K->290075K(361992K), 0.0162476 secs] [Times: user=0.14 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.311-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.311-0800: [ParNew: 78422K->8703K(78656K), 0.0119208 secs] 359795K->309438K(381424K), 0.0120230 secs] [Times: user=0.11 sys=0.00, real=0.01 secs] 
+2021-07-04T23:18:46.332-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.332-0800: [ParNew: 78493K->8703K(78656K), 0.0139672 secs] 379228K->332830K(404828K), 0.0140619 secs] [Times: user=0.12 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.353-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.353-0800: [ParNew: 78655K->8703K(78656K), 0.0127578 secs] 402782K->355776K(427864K), 0.0128437 secs] [Times: user=0.11 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.374-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.374-0800: [ParNew: 78655K->8703K(78656K), 0.0124204 secs] 425728K->376980K(449072K), 0.0125065 secs] [Times: user=0.11 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.396-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.396-0800: [ParNew: 78655K->8703K(78656K), 0.0185506 secs] 446932K->401764K(473856K), 0.0186358 secs] [Times: user=0.14 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.424-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.424-0800: [ParNew: 78655K->8689K(78656K), 0.0134506 secs] 471716K->424704K(496868K), 0.0135372 secs] [Times: user=0.11 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.446-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.446-0800: [ParNew: 78451K->8699K(78656K), 0.0163914 secs] 494467K->449612K(521812K), 0.0164851 secs] [Times: user=0.15 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.471-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.471-0800: [ParNew: 78651K->8703K(78656K), 0.0132832 secs] 519564K->470523K(542700K), 0.0133670 secs] [Times: user=0.11 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.492-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.492-0800: [ParNew: 78655K->8695K(78656K), 0.0152244 secs] 540475K->497751K(569776K), 0.0153089 secs] [Times: user=0.14 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.515-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.515-0800: [ParNew: 78647K->8703K(78656K), 0.0143301 secs] 567703K->522753K(594904K), 0.0144216 secs] [Times: user=0.13 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.538-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.538-0800: [ParNew: 78655K->8696K(78656K), 0.0130145 secs] 592705K->544280K(616388K), 0.0131081 secs] [Times: user=0.12 sys=0.00, real=0.02 secs] 
+2021-07-04T23:18:46.559-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.559-0800: [ParNew: 78123K->8701K(78656K), 0.0114221 secs] 613707K->563474K(635660K), 0.0115080 secs] [Times: user=0.10 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.579-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.579-0800: [ParNew: 78493K->8701K(78656K), 0.0115003 secs] 633266K->583138K(655432K), 0.0115883 secs] [Times: user=0.10 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.599-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.599-0800: [ParNew: 78653K->8702K(78656K), 0.0153767 secs] 653090K->608015K(680196K), 0.0154669 secs] [Times: user=0.14 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.622-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.622-0800: [ParNew: 78654K->8702K(78656K), 0.0141188 secs] 677967K->631716K(703940K), 0.0142109 secs] [Times: user=0.12 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.645-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.645-0800: [ParNew: 78346K->8701K(78656K), 0.0138492 secs] 701359K->655814K(728072K), 0.0139284 secs] [Times: user=0.13 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.668-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.668-0800: [ParNew: 78653K->8701K(78656K), 0.0138621 secs] 725766K->677459K(749676K), 0.0139408 secs] [Times: user=0.12 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.690-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.690-0800: [ParNew: 78653K->8702K(78656K), 0.0132834 secs] 747411K->700042K(772456K), 0.0133698 secs] [Times: user=0.12 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.711-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.711-0800: [ParNew: 78654K->8702K(78656K), 0.0137672 secs] 769994K->721775K(794012K), 0.0138604 secs] [Times: user=0.12 sys=0.00, real=0.01 secs] 
+2021-07-04T23:18:46.735-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.735-0800: [ParNew: 78654K->8695K(78656K), 0.0117836 secs] 791727K->741104K(813528K), 0.0119176 secs] [Times: user=0.10 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.755-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.755-0800: [ParNew: 78647K->8703K(78656K), 0.0151135 secs] 811056K->766016K(838356K), 0.0152066 secs] [Times: user=0.14 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.779-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.779-0800: [ParNew: 78058K->8703K(78656K), 0.0142766 secs] 835371K->788256K(860528K), 0.0143707 secs] [Times: user=0.12 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.803-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.803-0800: [ParNew: 78220K->8702K(78656K), 0.0143212 secs] 857773K->810827K(883268K), 0.0144149 secs] [Times: user=0.12 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.826-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.826-0800: [ParNew: 78635K->8696K(78656K), 0.0169478 secs] 880760K->835998K(908404K), 0.0170333 secs] [Times: user=0.14 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.853-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.853-0800: [ParNew: 78648K->8692K(78656K), 0.0127220 secs] 905950K->854257K(926616K), 0.0128250 secs] [Times: user=0.11 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.875-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.875-0800: [ParNew: 78446K->8703K(78656K), 0.0189289 secs] 924011K->879439K(951852K), 0.0190308 secs] [Times: user=0.17 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.904-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.904-0800: [ParNew: 78598K->8701K(78656K), 0.0196618 secs] 949335K->905866K(978324K), 0.0197641 secs] [Times: user=0.17 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.933-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.933-0800: [ParNew: 78333K->8697K(78656K), 0.0153626 secs] 975498K->927878K(1000268K), 0.0154471 secs] [Times: user=0.14 sys=0.01, real=0.01 secs] 
+2021-07-04T23:18:46.957-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.957-0800: [ParNew: 78315K->8702K(78656K), 0.0167699 secs] 997496K->950761K(1023184K), 0.0168692 secs] [Times: user=0.15 sys=0.01, real=0.02 secs] 
+2021-07-04T23:18:46.982-0800: [GC (Allocation Failure) 2021-07-04T23:18:46.982-0800: [ParNew: 78367K->8700K(78656K), 0.0173831 secs] 1020425K->975406K(1047884K), 0.0174751 secs] [Times: user=0.16 sys=0.01, real=0.01 secs] 
+执行结束!共生成对象次数:11129
+Heap
+ par new generation   total 78656K, used 11885K [0x00000006c0000000, 0x00000006c5550000, 0x00000006f4000000)
+  eden space 69952K,   4% used [0x00000006c0000000, 0x00000006c031c508, 0x00000006c4450000)
+  from space 8704K,  99% used [0x00000006c4450000, 0x00000006c4ccf070, 0x00000006c4cd0000)
+  to   space 8704K,   0% used [0x00000006c4cd0000, 0x00000006c4cd0000, 0x00000006c5550000)
+ concurrent mark-sweep generation total 969228K, used 966706K [0x00000006f4000000, 0x000000072f283000, 0x00000007c0000000)
+ Metaspace       used 5176K, capacity 5386K, committed 5504K, reserved 1056768K
+  class space    used 559K, capacity 626K, committed 640K, reserved 1048576K
+GC总结：42次YoungGC，一次CMSGC循环
+
+4. G1GC执行结果
+➜  target git:(master) ✗ java -jar -XX:+PrintGC -XX:+PrintGCDateStamps -XX:+UseG1GC demo-0.0.1-SNAPSHOT.jar 
+正在执行...
+2021-07-04T23:25:31.403-0800: [GC pause (G1 Evacuation Pause) (young) 26M->7868K(256M), 0.0030308 secs]
+2021-07-04T23:25:31.418-0800: [GC pause (G1 Evacuation Pause) (young) 42M->18M(256M), 0.0034028 secs]
+2021-07-04T23:25:31.436-0800: [GC pause (G1 Evacuation Pause) (young) 71M->40M(256M), 0.0046739 secs]
+2021-07-04T23:25:31.465-0800: [GC pause (G1 Evacuation Pause) (young) 118M->67M(256M), 0.0067366 secs]
+2021-07-04T23:25:31.490-0800: [GC pause (G1 Evacuation Pause) (young) 156M->87M(256M), 0.0078149 secs]
+2021-07-04T23:25:31.512-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 170M->108M(256M), 0.0061336 secs]
+2021-07-04T23:25:31.518-0800: [GC concurrent-root-region-scan-start]
+2021-07-04T23:25:31.518-0800: [GC concurrent-root-region-scan-end, 0.0002007 secs]
+2021-07-04T23:25:31.518-0800: [GC concurrent-mark-start]
+2021-07-04T23:25:31.520-0800: [GC concurrent-mark-end, 0.0018070 secs]
+2021-07-04T23:25:31.520-0800: [GC remark, 0.0012944 secs]
+2021-07-04T23:25:31.521-0800: [GC cleanup 121M->121M(256M), 0.0006089 secs]
+2021-07-04T23:25:31.540-0800: [GC pause (G1 Evacuation Pause) (young) 210M->138M(554M), 0.0131183 secs]
+2021-07-04T23:25:31.700-0800: [GC pause (G1 Humongous Allocation) (young) (initial-mark) 475M->234M(1232M), 0.0242888 secs]
+2021-07-04T23:25:31.724-0800: [GC concurrent-root-region-scan-start]
+2021-07-04T23:25:31.725-0800: [GC concurrent-root-region-scan-end, 0.0002510 secs]
+2021-07-04T23:25:31.725-0800: [GC concurrent-mark-start]
+2021-07-04T23:25:31.727-0800: [GC concurrent-mark-end, 0.0021911 secs]
+2021-07-04T23:25:31.727-0800: [GC remark, 0.0019923 secs]
+2021-07-04T23:25:31.729-0800: [GC cleanup 239M->238M(1232M), 0.0012371 secs]
+2021-07-04T23:25:31.731-0800: [GC concurrent-cleanup-start]
+2021-07-04T23:25:31.731-0800: [GC concurrent-cleanup-end, 0.0000524 secs]
+2021-07-04T23:25:31.821-0800: [GC pause (G1 Evacuation Pause) (young) 435M->290M(1805M), 0.0190380 secs]
+2021-07-04T23:25:31.985-0800: [GC pause (G1 Evacuation Pause) (young) 595M->360M(2264M), 0.0210763 secs]
+2021-07-04T23:25:32.198-0800: [GC pause (G1 Evacuation Pause) (young) 762M->452M(2631M), 0.0250165 secs]
+GC总结：8次YoungGC，一次G1GC循环
+
+
+
