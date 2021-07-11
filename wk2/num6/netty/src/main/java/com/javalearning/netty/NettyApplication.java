@@ -18,7 +18,7 @@ public class NettyApplication {
 
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(NettyApplication.class, args);
-		HttpGet httpGet = new HttpGet("http://localhost:8801");
+		HttpGet httpGet = new HttpGet("http://localhost:8888/test");
 		CloseableHttpResponse response = httpClient.execute(httpGet);
 		String content = EntityUtils.toString(response.getEntity(), "utf8");
 
